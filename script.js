@@ -32,10 +32,12 @@ EM HTML. LISTA DE CLASSES. TOGGLE(ALTERNA) A CLASSE LIGHT, COLOCANDO-A E TIRANDO
     // SUBSTITUIR A IMAGEM
     if(html.classList.contains('light')) {
         // SE LIGHT MODE MANTÉM A IMAGEM
-        img.setAttribute('src', '.assets/avatar-dark.png')
+        img.setAttribute('src','./assets/avatar-light.png')
+        img.setAttribute('alt','Foto de Maicon Paiva sério, usando óculos de sol e com a barba cheia e dourada, usando camisa preta com fundo desfocado')
     } else {
         // SENÃO, SUBSTITUIR A IMAGEM
-        img.setAttribute('src', '.assets/avatar-light.png')
+        img.setAttribute('src','./assets/avatar-dark.png')
+        img.setAttribute('alt','Foto de Maicon Paiva sério, usando gorro bege e preto e com a barba cheia e dourada, usando camisa preta')
     }
 
 }

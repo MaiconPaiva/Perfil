@@ -31,19 +31,22 @@ body{
 
     /* shorthand ==>
         background: color image repeat position/size */
-    background: var(--bg-url)
+    background: var(--bg-url);
+    height: 100vh;
 }
 body * {
     font-family: 'Borel', cursive;
     font-family: 'Pixelify Sans', cursive;
     color: var(--text-color);
 }
+
 /* Profile */
 #container {
-    border: 1px solid rgb(98, 65, 65);
-    width: 360px;
+    /* border: 1px solid rgb(98, 65, 65); */
+    width: 99%;
+    max-width: 550px;
     margin: auto;/*centraliza caixas com valores fixos (width e height em pixels)*/
-    margin-top: 56px;
+    margin: 56px auto 0;
     padding: 0 24px;
 }
 
@@ -195,3 +198,13 @@ ul li a:hover {
     color: rgb(234, 31, 31);
 }
 
+
+/* media queries */
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
