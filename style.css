@@ -11,7 +11,7 @@
     --surface-color: rgba(255, 255, 255, 0.1);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --highlight-color: rgba(255, 255, 255, 0.2);
-    --switch-bg-url: url(./assets/bg-sun.svg) center, url(./assets/Sun.svg) no-repeat center;
+    --switch-bg-url: url(./assets/bg-moon.svg) center, url(./assets/MoonStars.svg) no-repeat center;
 }
 .light {
     --text-color: black;
@@ -20,7 +20,7 @@
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
-    --switch-bg-url: url(./assets/bg-moon.svg) center, url(./assets/MoonStars.svg) no-repeat center;
+    --switch-bg-url: url(./assets/bg-sun.svg) center, url(./assets/Sun.svg) no-repeat center;
 }
 
 body{
@@ -81,8 +81,8 @@ body * {
 }
 #switch button {
     cursor: pointer;
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     background: var(--switch-bg-url);
     border: 0;
     border-radius: 50%;
@@ -90,8 +90,9 @@ body * {
     position: absolute; /*necessário para alterar a camada (z-index)*/
     z-index: 1; /*button na camada 1 enquanto restante na camado 0*/
     transform: translateY(-50%);/*alinhando em absolute com translateY + top ou translateX + right*/
-    top: 50%;
-    left: 0;
+    top: 55%;
+    left: -3px;
+    animation: slide-out 1s backwards; /*movimento de animation do switch*/
 }
 #switch span {
     cursor: pointer;
@@ -99,13 +100,12 @@ body * {
     width: 64px;
     height: 24px;
     background: var(--surface-color);
-    border: 1.5px solid var(--stroke-color);
+    border: 0.01px solid var(--stroke-color);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
 }
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 1s forwards;
 }
 
 
@@ -208,3 +208,25 @@ ul li a:hover {
         --bg-url: url(./assets/bg-desktop-light.jpg);
     }
 }
+
+/* animation */
+@keyframes slide-in {
+    from {
+        left: -3px;
+    }
+
+    to {
+        left: 51%;
+    }
+}
+@keyframes slide-out {
+    from {
+        left: 51%;
+    }
+
+    to {
+        left: -3px;
+    }
+}
+
+
