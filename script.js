@@ -32,10 +32,10 @@ EM HTML. LISTA DE CLASSES. TOGGLE(ALTERNA) A CLASSE LIGHT, COLOCANDO-A E TIRANDO
     // SUBSTITUIR A IMAGEM
     if(html.classList.contains('light')) {
         // SE LIGHT MODE MANTÉM A IMAGEM
-        img.setAttribute('src', '.assets/avatar-dark.png')
+        img.setAttribute('src', './assets/avatar-dark.png')
     } else {
         // SENÃO, SUBSTITUIR A IMAGEM
-        img.setAttribute('src', '.assets/avatar-light.png')
+        img.setAttribute('src', './assets/avatar-light.png')
     }
 
 }
